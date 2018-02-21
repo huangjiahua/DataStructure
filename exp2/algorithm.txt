@@ -1,0 +1,29 @@
+while stack非空 {
+    if currPoint能插入 {
+        插入
+        if stack满 {
+            输出;
+            stack.pop();
+            while stack非空 && 栈顶是该行最后一个点
+                stack.pop();
+            if stack空
+                break;
+            curr = next(stack.pop())
+        }
+        else
+            currPoint = (stack.size(), 0);
+    }
+    else {
+        if 插入点不是这一行最后一个点 {
+            currPoint = next(currPoint);
+        }
+        else {
+        Wrong    while  stack非空 && 栈顶点是该行最后一个点
+                stack.pop();
+            if stack空
+                break;
+            currPoint = next(stack.pop());
+        }
+    }
+
+}

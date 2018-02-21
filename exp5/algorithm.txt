@@ -1,0 +1,17 @@
+bool Queens (arr, rank, col)
+{
+    if (!check_board(rank, col, arr))
+        return false;
+    if (rank != 0)
+        arr.push_back(chess(rank, col));
+
+    if (rank == N) {
+        print(arr);
+        return true;
+    }
+
+    for (int i = 1; i <= N; ++i)
+        Queens (arr, rank + 1, i);
+
+    return false;
+}
